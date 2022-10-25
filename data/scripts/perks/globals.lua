@@ -1,0 +1,2 @@
+FLAG=false
+HAMISNEAR=false
