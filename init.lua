@@ -18,7 +18,6 @@ end]]--
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	dofile_once("data/scripts/perks/perk.lua")
 	GamePrint("Hämikset love you")
-	-- Simply spawn the entity in world at the player's location
     local x, y = EntityGetTransform(player_entity)
 	-- Error handling
 	if not GameHasFlagRun("PERK_PICKED_hamis_nice") then
