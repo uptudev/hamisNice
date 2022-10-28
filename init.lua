@@ -14,11 +14,19 @@ function OnModInit()
 end--[[
 function OnModPostInit()
 	print("Mod - OnModPostInit()") -- Then this is called for all mods
-end
+end]]--
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	GamePrint( "OnPlayerSpawned() - Player entity id: " .. tostring(player_entity) )
+	dofile_once("data/scripts/perks/perk.lua")
+	GamePrint("Hämikset love you")
+	-- Simply spawn the entity in world at the player's location
+    local x, y = EntityGetTransform(player_entity)
+	-- Error handling
+	if not GameHasFlagRun("PERK_PICKED_hamis_nice") then
+    	local perk = perk_spawn(x, y, "hamis_nice")
+    	perk_pickup(perk, player_entity, EntityGetName(perk), false, false, false)
+	end
 end
-
+--[[
 function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
 	GamePrint( "OnWorldInitialized() " .. tostring(GameGetFrameNum()) )
 end
