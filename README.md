@@ -1,16 +1,14 @@
 # hamisNice
 
-    Description
-
 Hämis 👍
 
 This mod creates a perk that allows you to emote a thumbs up to any surrounding Hämis using the RMB when nearby.
-___
-    Downloads
+
+## Downloads
 
 [Current version archive](https://github.com/uptudev/hamisNice/releases/download/v0.0.2a/hamisNice_v0.0.2a.tar.gz) (v0.0.2a)
-___
-    Instructions
+
+## Installation
 
 1. Download the above tarball.
 2. Extract it somewhere.
